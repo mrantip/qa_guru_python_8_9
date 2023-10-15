@@ -3,14 +3,14 @@ from allure_commons.types import Severity
 from selene.support.shared import browser
 from selene import be, by
 
-
-
 allure.dynamic.tag('web')
 allure.dynamic.severity(Severity.CRITICAL)
 allure.dynamic.label('owner', 'mrantip')
 allure.dynamic.feature('Issues tab')
 allure.dynamic.story('Поиск Issues')
 allure.dynamic.link('https://github.com/', name='Testing')
+
+
 def test_dynamic_steps():
     '''
     Лямбда шаги через with allure.step
@@ -33,4 +33,3 @@ def test_dynamic_steps():
         browser.element(by.partial_text("#76")).should(be.visible)
 
     browser.quit()
-

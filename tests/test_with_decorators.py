@@ -12,6 +12,9 @@ allure.dynamic.link('https://github.com/', name='Testing')
 
 
 def test_decorator_steps():
+    '''
+    Шаги с декоратором @allure.step
+    '''
     open_main_page()
     search_for_repository("eroshenkoam/allure-example")
     go_to_repository("eroshenkoam/allure-example")
